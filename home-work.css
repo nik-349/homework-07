@@ -1,0 +1,15 @@
+.col {
+  width: 150px;
+  height: 150px;
+}
+
+.style-box {
+  display: flex;
+}
+.bac-col {
+  background-color: bisque;
+}
+.mar {
+  padding-top: 100px;
+  margin-left: 20px;
+}
