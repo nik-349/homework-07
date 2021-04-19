@@ -8,10 +8,11 @@ incrementRef.addEventListener('click', increment);
 
 
 function decrement() {
-valueCount.textContent = counterValue -=1 
-};
+      counterValue -= 1
+    valueCount.textContent = counterValue;
+    };
 
 function increment() {
-    valueCount.textContent = counterValue +=1 
-};
-
+      counterValue += 1
+    valueCount.textContent = counterValue;
+    };

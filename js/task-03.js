@@ -19,38 +19,39 @@ const images = [
 const galleryLi = document.querySelector('#gallery')
 galleryLi.setAttribute('style', 'display: flex; list-style: none')
 
-//<=====================Первый вариант======================>
-const mapMap = info => {
-    return images.map(ttt => {
-        galleryLi.insertAdjacentHTML('afterbegin',
-            `<li class=mar><img class=col src=${ttt.url} alt=${ttt.alt}></li>`)
-        return galleryLi
-    })
-    };
-mapMap(images);
+// //<=====================Первый вариант======================>
+// const mapMap = info => {
+//     return images.map(ttt => {
+//         galleryLi.insertAdjacentHTML('afterbegin',
+//             `<li class=mar><img class=col src=${ttt.url} alt=${ttt.alt}></li>`)
+//         return galleryLi
+//     })
+//     };
+// mapMap(images);
+
 
 
 //<====================Второй вариант======================>
-// const funcAddImages = value => {
+const funcAddImages = value => {
     
-//     return images.map(value => {
-//         const listAdd = document.createElement('li')
-//         listAdd.classList.add('mar')
+    return images.map(value => {
+        const listAdd = document.createElement('li')
+        listAdd.classList.add('mar')
 
-//         const imagesListAdd = document.createElement('img')
-//         imagesListAdd.src = value.url;
-//         imagesListAdd.alt = value.alt;
-//         imagesListAdd.width = 150;
-//         imagesListAdd.height = 150;
+        const imagesListAdd = document.createElement('img')
+        imagesListAdd.src = value.url;
+        imagesListAdd.alt = value.alt;
+        imagesListAdd.width = 150;
+        imagesListAdd.height = 150;
 
     
 
-//         listAdd.appendChild(imagesListAdd)
-//         return listAdd
-//     })
-// }
-// const result = funcAddImages(images)
-// galleryLi.append(...result)
+        listAdd.appendChild(imagesListAdd)
+        return listAdd
+    })
+}
+const result = funcAddImages(images)
+galleryLi.append(...result)
 
 //<===========================================================>
 
